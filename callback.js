@@ -42,24 +42,13 @@ function getNegativeNums(element) {
 
 // console.log(getNegativeNums([0, -1, 2, -4, -5, -6, -7, -8, -9, -10]));
 
-// function getNums(arr, callback) {
-//   const newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (callback(arr[i])) {
-//       newArr.push(arr[i]);
-//     }
-//   }
-//   return newArr;
-// }
-
 function getNums(arr, callback) {
   const newArr = [];
-  arr.forEach((element) => {
-    if (callback(element)) {
-      newArr.push(element);
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      newArr.push(arr[i]);
     }
-  });
-
+  }
   return newArr;
 }
 
@@ -68,15 +57,16 @@ const nums = [0, 1, 2, 5, 4, 5, -6, -7, -8, 9, -10];
 
 // console.log(getNums(nums, (element) => element > 0));
 
-
 //forEach
-nums.forEach((element, index) => console.log(`${element}, ${index}`));
+// nums.forEach((element, index) => console.log(`${element}, ${index}`));
 // console.log(nums.forEach((element) => (element + 2)));
 
 //map
-// const filteredByMapArr = nums.map((element) => element % 2 === 0);
-// console.log(filteredByMapArr);
+const filteredByMapArr = nums.map((element) => element + 2);
+console.log(filteredByMapArr);
+// console.log(nums);
 
 //filter
 // const filteredNums = nums.filter((element) => element % 2 === 0);
 // console.log(filteredNums);
+// console.log(nums);
